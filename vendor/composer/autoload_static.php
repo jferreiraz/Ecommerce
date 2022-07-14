@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInite3eaf5904503a164511801627ea245a2
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/jferreiraz/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'j' => 
+        array (
+            'jferreiraz\\' => 11,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'jferreiraz\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jferreiraz/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -29,20 +39,13 @@ class ComposerStaticInite3eaf5904503a164511801627ea245a2
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
-        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
-        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
-        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
-        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
-        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
-        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInite3eaf5904503a164511801627ea245a2::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite3eaf5904503a164511801627ea245a2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite3eaf5904503a164511801627ea245a2::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInite3eaf5904503a164511801627ea245a2::$prefixesPsr0;
             $loader->classMap = ComposerStaticInite3eaf5904503a164511801627ea245a2::$classMap;
 
